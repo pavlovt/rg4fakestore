@@ -1,0 +1,7 @@
+export { default as About } from './About'
+export { default as Cart } from './Cart'
+export { default as Checkout1 } from './Checkout1'
+export { default as Checkout2 } from './Checkout2'
+export { default as Checkout3 } from './Checkout3'
+export { default as Details } from './Details'
+export { default as Home } from './Home'
