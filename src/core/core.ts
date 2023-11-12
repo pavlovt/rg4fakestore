@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import dayjs from 'dayjs'
 import advanced from 'dayjs/plugin/advancedFormat'
 import isBetween from 'dayjs/plugin/isBetween'

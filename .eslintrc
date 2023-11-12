@@ -37,6 +37,7 @@
     "eol-last": "off",
     "no-undef": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "linebreak-style": "off"
   }
 }
