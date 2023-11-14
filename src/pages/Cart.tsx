@@ -22,6 +22,11 @@ function Cmp() {
       },
       { debug_mode: true },
     )
+
+    gtag('set', 'user_data', {
+      email: 'test@email.com',
+      phone_number: '5555551234',
+    })
   }, [cart])
 
   const tableRow = (row: Model['cart']) => (
