@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-1V78P0H22R"></script>
     <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
@@ -15,7 +16,6 @@
       })(window, document, 'script', 'dataLayer', 'GTM-WMBDTKNV')
     </script>
     <!-- End Google Tag Manager -->
-    <!-- <script src="https://www.googletagmanager.com/gtag/js?id=G-1V78P0H22R"></script> -->
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,14 +30,14 @@
       win.dataLayer = win.dataLayer || []
       win.gtag = (...args) => {
         // @ts-ignore
-        // win.dataLayer.push(args)
+        win.dataLayer.push(args)
         console.log('zgtag', args)
       }
 
-      // win.gtag('js', new Date())
+      win.gtag('js', new Date())
 
-      // win.gtag('config', 'G-1V78P0H22R', { debug_mode: true })
-      // win.gtag('event', 'tst_event')
+      win.gtag('config', 'G-1V78P0H22R', { debug_mode: true })
+      win.gtag('event', 'tst_event')
     </script>
     <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
     <!-- Google Tag Manager (noscript) -->
