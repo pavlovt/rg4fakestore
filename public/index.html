@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-1V78P0H22R"></script>
+    <!-- <script src="https://www.googletagmanager.com/gtag/js?id=G-1V78P0H22R"></script> -->
     <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
@@ -27,11 +27,17 @@
   <body>
     <script>
       const win = window
+      console.log('dl', win.dataLayer)
       win.dataLayer = win.dataLayer || []
-      win.gtag = (...args) => {
+      // win.gtag = (...args) => {
+      //   // @ts-ignore
+      //   win.dataLayer.push(args)
+      //   console.log('zgtag', args)
+      // }
+      win.gtag = (_, event, data) => {
         // @ts-ignore
-        win.dataLayer.push(args)
-        console.log('zgtag', args)
+        win.dataLayer.push({ ...data, event })
+        console.log('zgtag', win.dataLayer)
       }
 
       win.gtag('js', new Date())
