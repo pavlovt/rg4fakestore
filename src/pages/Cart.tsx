@@ -12,7 +12,7 @@ function Cmp() {
   useEffect(() => {
     if (isEmpty(cart)) return
 
-    gtag(
+    tag(
       'event',
       'view_cart',
       {
@@ -23,7 +23,7 @@ function Cmp() {
       { debug_mode: true },
     )
 
-    gtag('set', 'user_data', {
+    tag('set', 'user_data', {
       email: 'test@email.com',
       phone_number: '5555551234',
     })

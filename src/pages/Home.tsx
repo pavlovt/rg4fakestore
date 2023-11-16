@@ -15,7 +15,7 @@ function Cmp() {
   useEffect(() => {
     if (isEmpty(products)) return
 
-    gtag(
+    tag(
       'event',
       'view_item_list',
       {
@@ -24,7 +24,7 @@ function Cmp() {
       { debug_mode: true },
     )
 
-    gtag('set', 'user_data', {
+    tag('set', 'user_data', {
       email: 'test@email.com',
       phone_number: '5555551234',
     })

@@ -18,13 +18,13 @@ function Cmp() {
   useEffect(() => {
     if (isEmpty(product)) return
 
-    gtag('event', 'view_item', {
+    tag('event', 'view_item', {
       currency: 'USD',
       value: product.price,
       items: core.products2gtag([product]),
     })
 
-    gtag('set', 'user_data', {
+    tag('set', 'user_data', {
       email: 'test@email.com',
       phone_number: '5555551234',
     })
@@ -32,7 +32,7 @@ function Cmp() {
 
   const add = (product: any) => {
     dispatch.cart.add({ product, qty: 1 })
-    gtag('event', 'add_to_cart', {
+    tag('event', 'add_to_cart', {
       currency: 'USD',
       value: product.price,
       items: core.products2gtag([product]),

@@ -34,7 +34,7 @@
       //   win.dataLayer.push(args)
       //   console.log('zgtag', args)
       // }
-      win.gtag = (_, event, data) => {
+      win.tag = (_, event, data) => {
         // @ts-ignore
         win.dataLayer.push({ ...data, event })
         console.log('zgtag', win.dataLayer)
