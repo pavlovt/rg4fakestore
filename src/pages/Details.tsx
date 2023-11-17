@@ -13,7 +13,7 @@ function Cmp() {
 
   useEffect(() => {
     dispatch.products.getOne(Number(id))
-  }, [dispatch.products, id])
+  }, [])
 
   useEffect(() => {
     if (isEmpty(product)) return

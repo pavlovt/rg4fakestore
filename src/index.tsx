@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { GlobalStyles } from 'twin.macro'
@@ -10,10 +9,10 @@ import { store } from './store'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <GlobalStyles />
-      <App />
-    </React.StrictMode>
+    {/* <React.StrictMode> */}
+    <GlobalStyles />
+    <App />
+    {/* </React.StrictMode> */}
   </Provider>,
 )
 
