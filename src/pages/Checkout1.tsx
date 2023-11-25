@@ -12,10 +12,10 @@ function Cmp() {
   useEffect(() => {
     if (isEmpty(cart)) return
 
-    gtag('event', 'begin_checkout', {
+    tag('event', 'begin_checkout', {
       currency: 'USD',
-      value: cart.map(v => v.price).reduce((partialSum, price) => partialSum + price, 0),
-      items: core.products2gtag(cart),
+      value: cart.map(v => v.product.price).reduce((partialSum, price) => partialSum + price, 0),
+      items: core.products2gtag(cart.map(v => v.product)),
     })
   }, [cart])
 
@@ -23,7 +23,7 @@ function Cmp() {
     <div>
       <h1 tw="text-5xl">Checkout 1 Begin</h1>
 
-      <button onClick={() => navigate('checkout2')}>Next</button>
+      <button onClick={() => navigate('/checkout2')}>Next</button>
     </div>
   )
 }

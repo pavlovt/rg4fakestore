@@ -11,14 +11,15 @@ function Cmp() {
 
   useEffect(() => {
     if (isEmpty(cart)) return
+    console.log('🚀 ~ file: Cart.tsx:14 ~ useEffect ~ cart:', cart)
 
     tag(
       'event',
       'view_cart',
       {
         currency: 'USD',
-        value: cart.map(v => v.price).reduce((partialSum, price) => partialSum + price, 0),
-        items: core.products2gtag(cart),
+        value: cart.map(v => v.product.price).reduce((partialSum, price) => partialSum + price, 0),
+        items: core.products2gtag(cart.map(v => v.product)),
       },
       { debug_mode: true },
     )
@@ -66,7 +67,7 @@ function Cmp() {
         <tbody>{cart.map(v => tableRow(v))}</tbody>
       </table>
 
-      <button onClick={() => navigate('checkout1')}>Checkout</button>
+      <button onClick={() => navigate('/checkout1')}>Checkout</button>
     </div>
   )
 }
