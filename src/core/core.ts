@@ -3,7 +3,9 @@ import advanced from 'dayjs/plugin/advancedFormat'
 import isBetween from 'dayjs/plugin/isBetween'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
+import { sample } from 'lodash-es'
 import { Model } from '../store'
+import conf from './conf'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -81,6 +83,10 @@ class Core {
       category: prod.category,
       quantity: 1,
     }))
+  }
+
+  getUser() {
+    return sample(conf.users)
   }
 }
 

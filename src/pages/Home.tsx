@@ -20,14 +20,10 @@ function Cmp() {
       'view_item_list',
       {
         items: core.products2gtag(products),
+        user: core.getUser(),
       },
       { debug_mode: true },
     )
-
-    tag('set', 'user_data', {
-      email: 'test@email.com',
-      phone_number: '5555551234',
-    })
   }, [products])
 
   const tableRow = (row: Model['product']) => (

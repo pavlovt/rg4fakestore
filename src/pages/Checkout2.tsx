@@ -16,6 +16,7 @@ function Cmp() {
       currency: 'USD',
       value: cart.map(v => v.product.price).reduce((partialSum, price) => partialSum + price, 0),
       items: core.products2gtag(cart.map(v => v.product)),
+      user: core.getUser(),
     })
   }, [cart])
 

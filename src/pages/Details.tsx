@@ -22,11 +22,7 @@ function Cmp() {
       currency: 'USD',
       value: product.price,
       items: core.products2gtag([product]),
-    })
-
-    tag('set', 'user_data', {
-      email: 'test@email.com',
-      phone_number: '5555551234',
+      user: core.getUser(),
     })
   }, [product])
 
